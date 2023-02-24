@@ -36,8 +36,17 @@ resource "github_repository" "repositories" {
   auto_init              = true
   delete_branch_on_merge = true
   homepage_url           = try(each.value.homepage_url, "")
+  vulnerability_alerts   = true
 
   lifecycle {
     prevent_destroy = true
+  }
+  security_and_analysis {
+    secret_scanning {
+      status = "enabled"
+    }
+    secret_scanning_push_protection {
+      status = "enabled"
+    }
   }
 }
