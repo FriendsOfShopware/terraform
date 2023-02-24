@@ -32,5 +32,9 @@ variable "members" {
 }
 
 variable "repositories" {
-  default = {}
+  default = {
+    actions = {
+        description = "Collection of reusable workflows"
+    }
+  }
 }
