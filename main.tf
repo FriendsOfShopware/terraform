@@ -34,7 +34,7 @@ resource "github_repository" "repositories" {
   topics                 = try(each.value.topics, [])
   has_projects           = false
   has_wiki               = false
-  auto_init              = true
+  auto_init              = false
   delete_branch_on_merge = true
   homepage_url           = try(each.value.homepage_url, "")
   vulnerability_alerts   = true
