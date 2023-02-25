@@ -54,3 +54,9 @@ resource "github_repository" "repositories" {
     }
   }
 }
+
+resource "github_branch" "repositories" {
+  for_each = var.repositories
+  repository = github_repository.repositories[each.key].name
+  branch = "main"
+}
