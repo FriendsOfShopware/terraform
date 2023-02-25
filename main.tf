@@ -62,5 +62,4 @@ resource "github_branch_default" "repositories" {
   for_each = var.repositories
   repository = github_repository.repositories[each.key].name
   branch = github_branch.repositories[each.key].branch
-  rename = true
 }
