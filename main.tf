@@ -63,3 +63,18 @@ resource "github_branch_default" "repositories" {
   repository = github_repository.repositories[each.key].name
   branch = github_branch.repositories[each.key].branch
 }
+
+resource "github_branch_protection" "default" {
+  for_each = var.repositories
+  repository_id = github_repository.repositories[each.key].id
+
+  pattern = "main"
+  required_linear_history = true
+  require_conversation_resolution = true
+  push_restrictions = []
+  allows_force_pushes = false
+
+  required_pull_request_reviews {
+    dismiss_stale_reviews  = false
+  }
+}
