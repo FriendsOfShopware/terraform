@@ -222,5 +222,8 @@ variable "repositories" {
     FroshMailArchive = {
         description = "This plugin allows you to archive your mails."
     }
+    FroshEoriNumber = {
+        description = "This Shopware platform plugin adds the possibility to specify an EORI number."
+    }
   }
 }
