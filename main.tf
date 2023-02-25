@@ -49,9 +49,6 @@ resource "github_repository" "repositories" {
     secret_scanning {
       status = "enabled"
     }
-    secret_scanning_push_protection {
-      status = "enabled"
-    }
   }
 }
 
@@ -59,4 +56,11 @@ resource "github_branch" "repositories" {
   for_each = var.repositories
   repository = github_repository.repositories[each.key].name
   branch = "main"
+}
+
+resource "github_branch_default" "repositories" {
+  for_each = var.repositories
+  repository = github_repository.repositories[each.key].name
+  branch = github_branch.repositories[each.key].branch
+  rename = true
 }
