@@ -1,3 +1,7 @@
+variable "github_app_id" { default = null }
+variable "github_app_installation_id" { default = null }
+variable "github_app_pem_file" { default = null }
+
 variable "administrators" {
   default = [
     "shyim",
