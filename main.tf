@@ -15,6 +15,11 @@ terraform {
 
 provider "github" {
   owner = "FriendsOfShopware"
+  app_auth {
+    id              = var.github_app_id
+    installation_id = var.github_app_installation_id
+    pem_file        = var.github_app_pem_file
+  }
 }
 
 resource "github_membership" "users" {
@@ -76,5 +81,6 @@ resource "github_branch_protection" "default" {
 
   required_pull_request_reviews {
     dismiss_stale_reviews  = false
+    required_approving_review_count = 0
   }
 }
