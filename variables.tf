@@ -31,7 +31,8 @@ variable "members" {
     "stefanpoensgen",
     "tinect",
     "vienthuong",
-    "xndrdev"
+    "xndrdev",
+    "frosh-ci-user"
   ]
 }
 
