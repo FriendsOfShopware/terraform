@@ -86,5 +86,6 @@ resource "github_branch_protection" "default" {
   required_pull_request_reviews {
     dismiss_stale_reviews  = false
     required_approving_review_count = 0
+    pull_request_bypassers = [data.github_user.frosh-ci.node_id]
   }
 }
