@@ -22,6 +22,10 @@ provider "github" {
   }
 }
 
+data "github_user" "frosh-ci" {
+  username = "frosh-ci"
+}
+
 resource "github_membership" "users" {
   for_each = toset(distinct(concat(
     var.members,
@@ -76,7 +80,7 @@ resource "github_branch_protection" "default" {
   pattern = "main"
   required_linear_history = true
   require_conversation_resolution = true
-  push_restrictions = []
+  push_restrictions   = [data.github_user.frosh-ci.node_id]
   allows_force_pushes = false
 
   required_pull_request_reviews {
