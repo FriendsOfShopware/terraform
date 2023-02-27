@@ -32,7 +32,7 @@ variable "members" {
     "tinect",
     "vienthuong",
     "xndrdev",
-    "frosh-ci-user"
+    "frosh-ci"
   ]
 }
 
