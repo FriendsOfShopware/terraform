@@ -230,5 +230,8 @@ variable "repositories" {
     FroshEoriNumber = {
         description = "This Shopware platform plugin adds the possibility to specify an EORI number."
     }
+    FroshNicerAdmin = {
+        description = "This plugin is a game-changer for administration! With an intuitive interface and streamlined features, managing your administration has never been better."
+    }
   }
 }
