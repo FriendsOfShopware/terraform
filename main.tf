@@ -40,6 +40,7 @@ resource "github_repository" "repositories" {
   name                   = each.key
   description            = each.value.description
   has_issues             = try(each.value.has_issues, true)
+  has_discussions        = try(each.value.has_discussions, false)
   topics                 = try(each.value.topics, [])
   has_projects           = false
   has_wiki               = false

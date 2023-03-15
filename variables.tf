@@ -67,6 +67,7 @@ variable "repositories" {
     }
     FroshPlatformThumbnailProcessor = {
         description = "This shopware6 plugin allows you to use variable thumbnails - on the fly. Including lazy loading."
+        has_discussions = true
     }
     FroshProductCompare = {
         description = "This plugin allows your customers to compare products."
