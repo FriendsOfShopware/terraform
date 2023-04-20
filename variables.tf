@@ -5,6 +5,7 @@ variable "github_app_pem_file" { default = null }
 variable "administrators" {
   default = [
     "shyim",
+    "tinect",
   ]
 }
 
@@ -26,7 +27,6 @@ variable "members" {
     "niklaslimberg",
     "pumpi",
     "shyim",
-    "skaiwlkr",
     "sobyte",
     "stefanpoensgen",
     "tinect",
