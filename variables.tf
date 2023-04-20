@@ -234,5 +234,8 @@ variable "repositories" {
     FroshNicerAdmin = {
         description = "This plugin is a game-changer for administration! With an intuitive interface and streamlined features, managing your administration has never been better."
     }
+    code-quality-meta = {
+        description = "Meta repository for Shopware 6 code quality tools"
+    }
   }
 }
