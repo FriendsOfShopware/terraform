@@ -77,6 +77,7 @@ variable "repositories" {
     }
     FroshPlatformBunnycdnMediaStorage = {
         description = "This plugin allows you to use BunnyCDN as a media storage."
+        has_discussions = true
     }
     FroshLazySizes = {
         description = "This plugin allows you to use lazy loading for your images."
